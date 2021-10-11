@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font-family: 'KoHo', sans-serif;
+}
+body{
+    width:inherit;
+    background-image: linear-gradient(135deg, rgba(189, 200, 208, 0.93) 24%, rgba(220, 231, 234, 0.92) 100%);
+}   
+.for {
+    width: 55%;
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 15px;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #0000002b;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #0000006b;
+    border-radius: 20px;
+}
+
+input.search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    margin: 20px 0px;
+    border-radius: 15px;
+    background: #0000002b;
+    color: #fff;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+    height: 30px;
+}
+.cityname {
+    text-transform: capitalize;
+    font-size: 50px;
+    color: #24243e;
+    
+}
+.flex-container {
+    width: auto;
+    height: 100%;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0px solid #000;
+    border-radius: 10px;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 30px;
+    
+    /* background-color: #fff; */
+}
+.icons{
+    width: auto;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    /* box-shadow: 16px 16px 32px #d9d9d9, -16px -16px 32px #ffffff; */
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.night {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.sun{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px;
+    
+}
+.moon{
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    
+} 
+
+.rise{
+    padding: 30px;
+    margin: 20px;
+    border-radius: 30px;
+    
+    background: linear-gradient(to right, #eacda3, #d6ae7b);
+    color: #fff;
+    text-align: center;
+}
+.set{
+    padding: 30px;
+    margin: 20px;
+    background: linear-gradient(to right, #232526, #414345);
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+}
+.pre{
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background:rgba(189, 200, 208, 0.7);
+}
+.pre:hover {
+    color: black;
+    border-radius: 25px;
+    background: rgba(189, 200, 208, 1);
+    box-shadow: 20px 20px 60px #d0cfcf,
+        -20px -20px 60px #ffffff;
+    transform: translate(0px, -15px);
+    transition: transform 0.2s ease-in-out;
+}
+.thu {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background:rgba(189, 200, 208, 0.7);
+}
+.thu:hover {
+    color: black;
+    border-radius: 25px;
+    background:rgba(189, 200, 208, 1);
+    box-shadow: 20px 20px 60px #d0cfcf,
+    -20px -20px 60px #ffffff;
+    transform: translate(0px, -15px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.rain {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background:rgba(189, 200, 208, 0.7);
+}
+
+.rain:hover {
+    color: black;
+    border-radius: 25px;
+    background: rgba(189, 200, 208, 1);
+    box-shadow: 20px 20px 60px #d0cfcf,
+        -20px -20px 60px #ffffff;
+    transform: translate(0px, -15px);
+    transition: transform 0.2s ease-in-out;
+}
+
+.wind{
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    background:rgba(189, 200, 208, 0.7);
+}
+
+.wind:hover {
+    color: black;
+    border-radius: 25px;
+    background: rgba(189, 200, 208, 1);
+    box-shadow: 20px 20px 60px #d0cfcf,
+        -20px -20px 60px #ffffff;
+    transform: translate(0px, -15px);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    /* For mobile phones: */
+    [class*="day"] {
+        text-align: center;
+        flex-direction: column;
+    }
+    [class*="night"]{
+        text-align: center;
+        flex-direction: column;
+    }
+    [class*="flex"] {
+        flex-direction: column;
+    }
+    
+}

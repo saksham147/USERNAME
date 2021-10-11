@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body onload="DefaultScreen()">
+    <center>
+        <div class="for">
+            <input type="text" id="cityInput" class="search-bar">
+            <button type="button" onclick="GetInfo()"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                    viewBox="0 0 1024 1024" height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                </svg></button>
+        </div>
+        <h1 id="cityName" class="cityname"></h1>
+    </center>
+
+    <div class="flex-container">
+    
+        <div class="icons">
+            <div class="flex">
+                <h1 class="weather" id="date1"></h1>
+                <h3 class="humValues" id="temp1"></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="day-night">
+                <div class="day">
+                    <div class="detail">
+                        <h2>Day:</h2>
+                        <h1 id="detail1day"></h1>
+                    </div>
+                    <div class="sun">
+                        <div class="rise">
+                            <h3>SUNRISE</h3>
+                            <h4 id="sunrise1"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>SUNSET</h3>
+                            <h4 id="sunset1"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre1day"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu1day"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain1day"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind1day"></h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="night">
+                    <div class="detail">
+                        <h2>Night:</h2>
+                        <h1 id="detail1night"></h1>
+                    </div>
+                    <div class="moon">
+                        <div class="rise">
+                            <h3>MOONRISE</h3>
+                            <h4 id="moonrise1"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>MOONSET</h3>
+                            <h4 id="moonset1"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre1night"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu1night"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain1night"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind1night"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+        <div class="icons">
+            <div class="flex">
+                <h1 class="weather" id="date2"></h1>
+                <h3 class="humValues" id="temp2"></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="day-night">
+                <div class="day">
+                    <div class="detail">
+                        <h2>Day:</h2>
+                        <h1 id="detail2day"></h1>
+                    </div>
+                    <div class="sun">
+                        <div class="rise">
+                            <h3>SUNRISE</h3>
+                            <h4 id="sunrise2"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>SUNSET</h3>
+                            <h4 id="sunset2"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre2day"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu2day"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain2day"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind2day"></h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="night">
+                    <div class="detail">
+                        <h2>Night:</h2>
+                        <h1 id="detail2night"></h1>
+                    </div>
+                    <div class="moon">
+                        <div class="rise">
+                            <h3>MOONRISE</h3>
+                            <h4 id="moonrise2"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>MOONSET</h3>
+                            <h4 id="moonset2"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre2night"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu2night"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain2night"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind2night"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+        <div class="icons">
+            <div class="flex">
+                <h1 class="weather" id="date3"></h1>
+                <h3 class="humValues" id="temp3"></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="day-night">
+                <div class="day">
+                    <div class="detail">
+                        <h2>Day:</h2>
+                        <h1 id="detail3day"></h1>
+                    </div>
+                    <div class="sun">
+                        <div class="rise">
+                            <h3>SUNRISE</h3>
+                            <h4 id="sunrise3"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>SUNSET</h3>
+                            <h4 id="sunset3"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre3day"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu3day"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain3day"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind3day"></h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="night">
+                    <div class="detail">
+                        <h2>Night:</h2>
+                        <h1 id="detail3night"></h1>
+                    </div>
+                    <div class="moon">
+                        <div class="rise">
+                            <h3>MOONRISE</h3>
+                            <h4 id="moonrise3"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>MOONSET</h3>
+                            <h4 id="moonset3"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre3night"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu3night"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain3night"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind3night"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+        <div class="icons">
+            <div class="flex">
+                <h1 class="weather" id="date4"></h1>
+                <h3 class="humValues" id="temp4"></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="day-night">
+                <div class="day">
+                    <div class="detail">
+                        <h2>Day:</h2>
+                        <h1 id="detail4day"></h1>
+                    </div>
+                    <div class="sun">
+                        <div class="rise">
+                            <h3>SUNRISE</h3>
+                            <h4 id="sunrise4"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>SUNSET</h3>
+                            <h4 id="sunset4"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre4day"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu4day"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain4day"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind4day"></h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="night">
+                    <div class="detail">
+                        <h2>Night:</h2>
+                        <h1 id="detail4night"></h1>
+                    </div>
+                    <div class="moon">
+                        <div class="rise">
+                            <h3>MOONRISE</h3>
+                            <h4 id="moonrise4"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>MOONSET</h3>
+                            <h4 id="moonset4"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre4night"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu4night"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain4night"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind4night"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    
+        <div class="icons">
+            <div class="flex">
+                <h1 class="weather" id="date5"></h1>
+                <h3 class="humValues" id="temp5"></h3>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="day-night">
+                <div class="day">
+                    <div class="detail">
+                        <h2>Day:</h2>
+                        <h1 id="detail5day"></h1>
+                    </div>
+                    <div class="sun">
+                        <div class="rise">
+                            <h3>SUNRISE</h3>
+                            <h4 id="sunrise5"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>SUNSET</h3>
+                            <h4 id="sunset5"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre5day"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu5day"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain5day"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind5day"></h3>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="night">
+                    <div class="detail">
+                        <h2>Night:</h2>
+                        <h1 id="detail5night"></h1>
+                    </div>
+                    <div class="moon">
+                        <div class="rise">
+                            <h3>MOONRISE</h3>
+                            <h4 id="moonrise5"></h4>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="set">
+                            <h3>MOONSET</h3>
+                            <h4 id="moonset5"></h4>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="extra">
+                    <div class="flex">
+                        <div class="pre">
+                            <h3 id="pre5night"></h3>
+                        </div>
+                        <div class="thu">
+                            <h3 id="thu5night"></h3>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="rain">
+                            <h3 id="rain5night"></h3>
+                        </div>
+                        <div class="wind">
+                            <h3 id="wind5night"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+    
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+</body>
+
+</html>
